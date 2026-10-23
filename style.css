@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b8b7b1;
+    color: #171717;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* 1. YUQORIDAGI BANNER */
+
+.hero {
+    width: 100%;
+    min-height: 380px;
+    background-color: #090909;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 48%;
+    padding: 35px 0 35px 11%;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 360px;
+    color: #c9c9c9;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #ff9000;
+    color: white;
+    text-decoration: none;
+    padding: 11px 26px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.hero-button:hover {
+    background-color: #e77b00;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.85;
+}
+
+
+/* 2. TRASSA BO'LIMI */
+
+.trassa {
+    background-color: #b8b7b1;
+    padding: 28px 20px 45px;
+}
+
+.trassa h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 65px;
+    font-weight: 800;
+}
+
+.cards {
+    max-width: 850px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/* KARTOCHKALAR */
+
+.card {
+    display: block;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #080808;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card input {
+    display: none;
+}
+
+.card img {
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+}
+
+.card-content {
+    min-height: 125px;
+    padding: 14px;
+    background-color: #080808;
+    color: white;
+    transition: background-color 0.25s ease;
+}
+
+.card h4 {
+    color: white;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+.card p {
+    color: white;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* BOSILGANDA OLOV RANG */
+
+.card input:checked + img + .card-content {
+    background-color: #ff9500;
+}
+
+.card input:checked + img + .card-content h4,
+.card input:checked + img + .card-content p {
+    color: #603000;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+
+/* 3. ALOQA BO'LIMI */
+
+.contact {
+    min-height: 390px;
+    background: linear-gradient(110deg, #ff7918, #ff9b20);
+    display: flex;
+    overflow: hidden;
+}
+
+.contact-left {
+    width: 55%;
+    padding: 35px 0 30px 11%;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-left h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 45px;
+}
+
+.contact form {
+    max-width: 445px;
+    width: 100%;
+}
+
+.form-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+    margin-bottom: 9px;
+}
+
+.contact input,
+.contact textarea,
+.contact button {
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.contact input {
+    height: 36px;
+    padding: 0 12px;
+}
+
+.contact textarea {
+    height: 105px;
+    padding: 12px;
+    resize: vertical;
+    margin-bottom: 12px;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #b7b7b7;
+}
+
+.contact button {
+    height: 40px;
+    background-color: #f5f5f5;
+    color: #b89b87;
+    cursor: pointer;
+}
+
+.contact-right {
+    width: 45%;
+    display: flex;
+    align-items: stretch;
+}
+
+.contact-right img {
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* 4. PASTKI XARITA */
+
+.map {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #202020;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+}
+.map-marker {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 65px;
+    height: 65px;
+    border: 2px solid #ff8b31;
+    border-radius: 50% 50% 50% 0;
+    background-color: #101010;
+    transform: translateX(-50%) rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-marker span {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    transform: rotate(45deg);
+}
+
+
+/* 5. TELEFON VA KICHIK EKRANLAR */
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: 360px;
+    }
+
+    .hero-content {
+        width: 70%;
+        padding-left: 7%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-image {
+        width: 70%;
+        opacity: 0.55;
+    }
+
+    .trassa h2 {
+        margin-bottom: 35px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-left {
+        width: 100%;
+        padding: 30px 7%;
+    }
+
+    .contact-left h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .contact-right {
+        width: 100%;
+        height: 300px;
+    }
+
+    .contact-right img {
+        min-height: 0;
+        height: 300px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero-content {
+        width: 85%;
+    }
+
+    .form-inputs {
+        grid-template-columns: 1fr;
+    }
+}
